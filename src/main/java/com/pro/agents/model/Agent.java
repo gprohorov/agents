@@ -1,4 +1,5 @@
 package com.pro.agents.model;
 
-public class Agent {
+public enum Agent {
+    PERSON, COMPANY, BUSSINESMAN;
 }
