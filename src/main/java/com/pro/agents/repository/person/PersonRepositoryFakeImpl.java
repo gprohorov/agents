@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-@Repository("fake")
+@Repository("fakeperson")
 public class PersonRepositoryFakeImpl implements IPersonRepository {
 
     @Override

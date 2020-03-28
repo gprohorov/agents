@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-@Repository("fake")
+@Repository("fake-agency")
 public class AgencyRepositoryFakeImpl implements IAgencyRepository {
 
     @Override

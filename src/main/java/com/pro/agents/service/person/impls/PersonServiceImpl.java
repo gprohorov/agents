@@ -12,10 +12,11 @@ import java.util.List;
 @Service
 public class PersonServiceImpl implements IPersonService {
 
+
     private final IPersonRepository repository;
 
     @Autowired
-    public PersonServiceImpl(@Qualifier("fake") IPersonRepository repository) {
+    public PersonServiceImpl(@Qualifier("fakeperson") IPersonRepository repository) {
         this.repository = repository;
     }
 
@@ -42,6 +43,6 @@ public class PersonServiceImpl implements IPersonService {
 
     @Override
     public List<Person> getAll() {
-        return null;
+        return repository.getAll();
     }
 }

@@ -15,7 +15,7 @@ public class AgencyServiceImpl implements IAgencyService {
     private final IAgencyRepository repository;
 
     @Autowired
-    public AgencyServiceImpl(@Qualifier("fake") IAgencyRepository repository) {
+    public AgencyServiceImpl(@Qualifier("fake-agency") IAgencyRepository repository) {
         this.repository = repository;
     }
 
