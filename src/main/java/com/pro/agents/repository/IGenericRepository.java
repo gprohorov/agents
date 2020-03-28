@@ -1,8 +1,9 @@
-package com.pro.agents.service;
+package com.pro.agents.repository;
 
 import java.util.List;
 
-public interface IGenericService<T> {
+public interface IGenericRepository<T> {
+
     T create(T t);
     T update(T t);
     T get(String id);

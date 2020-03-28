@@ -1,21 +1,22 @@
-package com.pro.agents.service.agency.impls;
+package com.pro.agents.repository.agency;
 
 import com.pro.agents.model.Agency;
 import com.pro.agents.model.AgencyStatus;
 import com.pro.agents.model.Agent;
-import com.pro.agents.service.agency.interfaces.IAgencyService;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-public class AgencyServiceFakeImpl implements IAgencyService {
-
+@Repository("fake")
+public class AgencyRepositoryFakeImpl implements IAgencyRepository {
 
     @Override
     public Agency create(Agency agency) {
         return null;
     }
+
     @Override
     public Agency update(Agency agency) {
         return null;
@@ -27,8 +28,7 @@ public class AgencyServiceFakeImpl implements IAgencyService {
     }
 
     public Agency get(int id) {
-        return this.getAll().stream()
-                .filter(agent -> agent.getId() == id)
+        return this.getAll().stream().filter(agency -> agency.getId() == id)
                 .findFirst().get();
     }
 
@@ -37,17 +37,18 @@ public class AgencyServiceFakeImpl implements IAgencyService {
         return null;
     }
 
+
     public Agency delete(int id) {
         return null;
     }
 
     @Override
     public List<Agency> getAll() {
-        return this.agents;
+        return this.agencies;
     }
 
 
-    private List<Agency> agents = Arrays.asList(
+    private List<Agency> agencies = Arrays.asList(
 
             new Agency(1, "JoinUp", Agent.COMPANY, "address", "1111111",
                     " Иван Иваныч", AgencyStatus.PRIMARY, 10,
@@ -56,6 +57,8 @@ public class AgencyServiceFakeImpl implements IAgencyService {
             new Agency(2, "CAM", Agent.COMPANY, "address", "22222222",
                     "Gtnh Gtnhjdbx", AgencyStatus.PRIMARY, 10,
                     "desc", LocalDateTime.now(), LocalDateTime.now())
-
     );
+
+
+
 }
