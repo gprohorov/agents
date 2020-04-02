@@ -2,10 +2,14 @@ package com.pro.agents.model;
 
 
 //  скорее всего то же самое что и персон для для пациентов
+//  то есть из него потом делается Пациент для процедур и гость для готеля
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
+
+//  персона
+//
 
 public class Person {
 

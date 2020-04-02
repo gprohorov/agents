@@ -3,6 +3,13 @@ package com.pro.agents.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+
+//  агенство, которое делает ваучер (заказ на лечение-отдых )
+//  может быть фирмой, частным преппринимателем, частным лицом. PERSON, COMPANY, BUSSINESMAN;
+//  если это представитель фирмы JoinUp  Иван Иванов,
+//  то в поле name  пишут JoinUp,  а в поле contactPerson -  Иван Иванов
+// в поле  Agent  будет написано   -  COMPANY
+
 public class Agency {
 
     private int id;

@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class AgentBalance {
+//  отчет по балансу по агенству за указавнный период
+
+public class AgencyBalance {
 
     private String id;
     private LocalDate from;
