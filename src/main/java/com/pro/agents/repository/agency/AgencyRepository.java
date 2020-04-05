@@ -7,4 +7,4 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface IAgencyRepository extends IGenericRepository<Agency> {}
+public interface AgencyRepository extends IGenericRepository<Agency> {}

@@ -52,6 +52,17 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Person(String id, String fullName, String cellPhone, String town, String address, boolean gender, LocalDate dateOfBirth, String desc) {
+        this.id = id;
+        this.fullName = fullName;
+        this.cellPhone = cellPhone;
+        this.town = town;
+        this.address = address;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.desc = desc;
+    }
+
     public Person(String id, String fullName, String cellPhone, String town, String address, boolean gender, LocalDate dateOfBirth, String desc, String desc2, LocalDateTime createdAt, LocalDateTime modifiedAt) {
         this.id = id;
         this.fullName = fullName;

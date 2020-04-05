@@ -1,7 +1,7 @@
 package com.pro.agents.service.agency.impls;
 
 import com.pro.agents.model.Agency;
-import com.pro.agents.repository.agency.IAgencyRepository;
+import com.pro.agents.repository.agency.AgencyRepository;
 import com.pro.agents.service.agency.interfaces.IAgencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,10 +12,10 @@ import java.util.List;
 @Service
 public class AgencyServiceImpl implements IAgencyService {
 
-    private final IAgencyRepository repository;
+    private final AgencyRepository repository;
 
     @Autowired
-    public AgencyServiceImpl(@Qualifier("fake-agency") IAgencyRepository repository) {
+    public AgencyServiceImpl(@Qualifier("fake-agency") AgencyRepository repository) {
         this.repository = repository;
     }
 

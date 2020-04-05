@@ -33,7 +33,8 @@ public class PersonServiceImpl implements IPersonService {
 
     @Override
     public Person get(String id) {
-        return null;
+        return this.getAll().stream().filter(item -> item.getId().equals(id))
+                .findFirst().orElse(null);
     }
 
     @Override

@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
+
+
 @Repository("fakeperson")
 public class PersonRepositoryFakeImpl implements IPersonRepository {
 
@@ -23,7 +25,7 @@ public class PersonRepositoryFakeImpl implements IPersonRepository {
     @Override
     public Person get(String id) {
         return this.getAll().stream()
-                .filter(person -> person.getId().equals(id)).findFirst().get();
+                .filter(person -> person.getId().equals(id)).findFirst().orElse(null);
     }
 
     @Override
@@ -38,8 +40,9 @@ public class PersonRepositoryFakeImpl implements IPersonRepository {
 
 
     private List<Person> list = Arrays.asList(
-            new Person("1", "Ivanov", "1111", " Odessa", " Arnautskaye str.5", true, LocalDate.now().minusYears(44)),
-            new Person("2", "Petrov", "2222", " Lviv", " Bandery str.5", true, LocalDate.now().minusYears(40))
+            new Person("1", "Smirnov", "1111", " Odessa", " Arnautskaya str.5/7", true, LocalDate.now().minusYears(44),"Учасник АТО"),
+            new Person("2", "Moroz", "44444", " Riev", " Hreshatik str.7/11", true, LocalDate.now().minusYears(44), "Гепатит"),
+            new Person("3", "Petrov", "2222", " Lviv", " Bandery str.114/78", true, LocalDate.now().minusYears(40))
 
     );
 
