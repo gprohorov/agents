@@ -14,22 +14,22 @@ public class VoucherForm {
     private String cellPhone;
     private String town;
     private String address;
-    private boolean gender;
+    private String gender;
     private String dateOfBirth;
     private String desc;
 
     private String agency;
     private String from;
-    private String  to;
-    private boolean procedures;  // запланированы ли процедуры
-    private boolean hotel;        //  будет ли отель или в частном секторе
+    private String to;
+    private String procedures;  // запланированы ли процедуры
+    private String hotel;        //  будет ли отель или в частном секторе
     private String food;       // какая харчовка  :  ЗАВТРАК,  ЗАВТРАК И УЖИН,   ВСЁ ВКЛЮЧЕНО
     private VoucherStatus status;
 
     public VoucherForm() {
     }
 
-    public VoucherForm(String id, String fullName, String cellPhone, String town, String address, boolean gender, String dateOfBirth, String desc, String agency, String from, String to, boolean procedures, boolean hotel, String food, VoucherStatus status) {
+    public VoucherForm(String id, String fullName, String cellPhone, String town, String address, String gender, String dateOfBirth, String desc, String agency, String from, String to, String procedures, String hotel, String food, VoucherStatus status) {
         this.id = id;
         this.fullName = fullName;
         this.cellPhone = cellPhone;
@@ -87,11 +87,11 @@ public class VoucherForm {
         this.address = address;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -135,19 +135,19 @@ public class VoucherForm {
         this.to = to;
     }
 
-    public boolean isProcedures() {
+    public String getProcedures() {
         return procedures;
     }
 
-    public void setProcedures(boolean procedures) {
+    public void setProcedures(String procedures) {
         this.procedures = procedures;
     }
 
-    public boolean isHotel() {
+    public String getHotel() {
         return hotel;
     }
 
-    public void setHotel(boolean hotel) {
+    public void setHotel(String hotel) {
         this.hotel = hotel;
     }
 
