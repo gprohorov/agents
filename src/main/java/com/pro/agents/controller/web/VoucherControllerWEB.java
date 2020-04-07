@@ -74,6 +74,7 @@ public class VoucherControllerWEB {
         voucherForm.setDesc(voucher.getPerson().getDesc());
 
         voucherForm.setAgency(voucher.getAgency().getName());
+
         nullMonth = "";
         nullDay = "";
         if(voucher.getFrom().getMonthValue() < 10){
@@ -82,9 +83,11 @@ public class VoucherControllerWEB {
         if (voucher.getFrom().getDayOfMonth() < 10){
             nullDay = "0";
         }
+
         voucherForm.setFrom( nullMonth + voucher.getFrom().getMonthValue() + "/"
                 + nullDay + voucher.getFrom().getDayOfMonth() + "/"
                 + voucher.getFrom().getYear());
+
         nullMonth = "";
         nullDay = "";
         if(voucher.getTo().getMonthValue() < 10){
@@ -93,6 +96,7 @@ public class VoucherControllerWEB {
         if (voucher.getTo().getDayOfMonth() < 10){
             nullDay = "0";
         }
+
         voucherForm.setTo(nullMonth + voucher.getTo().getMonthValue() + "/"
                 + nullDay + voucher.getTo().getDayOfMonth() + "/"
                 + voucher.getTo().getYear());
