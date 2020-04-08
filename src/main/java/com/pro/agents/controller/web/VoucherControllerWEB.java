@@ -35,7 +35,6 @@ public class VoucherControllerWEB {
         return "vouchers";
     }
 
-
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public String editVoucher(Model model, @PathVariable(value = "id") String id){
         VoucherForm voucherForm = new VoucherForm();
