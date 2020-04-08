@@ -40,9 +40,9 @@ public class PersonRepositoryFakeImpl implements IPersonRepository {
 
 
     private List<Person> list = Arrays.asList(
-            new Person("1", "Smirnov", "1111", " Odessa", " Arnautskaya str.5/7", true, LocalDate.now().minusYears(44),"Учасник АТО"),
-            new Person("2", "Moroz", "44444", " Riev", " Hreshatik str.7/11", true, LocalDate.now().minusYears(44), "Гепатит"),
-            new Person("3", "Petrov", "2222", " Lviv", " Bandery str.114/78", true, LocalDate.now().minusYears(40))
+            new Person("1", "Мельник Дмитро Петрович", "1111", " Odessa", " Arnautskaya str.5/7", true, LocalDate.now().minusYears(44),"Учасник АТО"),
+            new Person("2", "Мороз Степан", "44444", " Riev", " Hreshatik str.7/11", true, LocalDate.now().minusYears(44), "Гепатит"),
+            new Person("3", "Петренко Василь", "2222", " Lviv", " Bandery str.114/78", true, LocalDate.now().minusYears(40))
 
     );
 
